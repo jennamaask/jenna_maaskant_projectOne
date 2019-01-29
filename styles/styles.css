@@ -1,0 +1,507 @@
+/* set up styles */
+
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block;}audio,canvas,video{display:inline-block;}audio:not([controls]){display:none;height:0;}[hidden]{display:none;}html{font-family:sans-serif;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;}a:focus{outline:thin dotted;}a:active,a:hover{outline:0;}h1{font-size:2em;}abbr[title]{border-bottom:1px dotted;}b,strong{font-weight:700;}dfn{font-style:italic;}mark{background:#ff0;color:#000;}code,kbd,pre,samp{font-family:monospace, serif;font-size:1em;}pre{white-space:pre-wrap;word-wrap:break-word;}q{quotes:\201C \201D \2018 \2019;}small{font-size:80%;}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline;}sup{top:-.5em;}sub{bottom:-.25em;}img{border:0;}svg:not(:root){overflow:hidden;}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em;}button,input,select,textarea{font-family:inherit;font-size:100%;margin:0;}button,input{line-height:normal;}button,html input[type=button],/* 1 */input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer;}button[disabled],input[disabled]{cursor:default;}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0;}input[type=search]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box;}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none;}textarea{overflow:auto;vertical-align:top;}table{border-collapse:collapse;border-spacing:0;}body,figure{margin:0;}legend,button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0;}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+.visuallyhidden:not(:focus):not(:active) { position: absolute; width: 1px; height: 1px; margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(00 0 0);overflow: hidden;}
+
+html {
+    font-size: 125%;
+}
+
+.wrapper {
+    margin: 0 auto;
+    max-width: 1280px;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Cormorant Garamond', serif;
+    text-transform: uppercase;
+}
+
+h1, h2 {
+    font-family: 'Fredericka the Great', cursive; 
+}
+
+h2 {
+    font-size: 2.55rem;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+h1 {
+    color: white;
+    font-size: 6rem;
+    text-align: right;
+    padding-left: 30%;
+    text-transform: uppercase;
+    margin-top: 50px;
+    line-height: .98;
+}
+
+h3 {
+    font-family: 'Cormorant Garamond', serif;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+}
+
+a.button {
+    font-size: .9rem;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+/* Header Styles */
+
+header {
+    background-image: url(../assets/image-1.jpg);
+    background-size: cover;
+    height: 100vh;
+    background-position: 
+}
+
+header .wrapper {
+    height: 100%;
+    position: relative;
+}
+
+header nav a {
+    color: white;
+    font-size: 1.1rem;
+    padding: 0 11px 5px 11px;
+    position: relative;
+}
+
+header nav a:after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background: white;
+    transition: left .5s, width .5s;
+}
+
+header nav a:hover:after {
+    left: 0;
+    width: 100%;
+}
+
+
+header ul li {
+    float: left;
+}
+
+header ul {
+    margin: 0;
+    padding-top: 24px;
+}
+
+.socialMedia {
+    position: absolute;
+    bottom: 50px;
+    right: -20px;
+}
+
+.socialMedia a:nth-child(2) i {
+    margin-right: 5px;
+}
+
+i {
+    color: white;
+    font-size: 1.1rem;
+    float: right;
+    clear: right;
+    padding-top: 16px;
+}
+
+/* home styles */
+
+.home {
+    background: #152d20;
+    padding: 100px 0;
+}
+
+.home article {
+    float: left;
+    width: 75%;
+    padding-left: 40px;
+}
+
+.home p {
+    color: white;
+    line-height: 1.45;
+    margin: 5px 0 49px;
+}
+
+.home h2 {
+    color: white;
+}
+
+.home figure {
+    float: left;
+    width: 25%;
+    padding-top: 10px;
+}
+
+.home img {
+    display: block;
+    width: 100%;
+}
+
+.home a {
+    color: #152d20;
+    background: white;
+    padding: 14px 28px;
+}
+
+.home a:hover {
+    color: white;
+    background: #152d20;
+    border: 2px solid white;
+    padding: 12px 26px;
+
+}
+
+/* about styles */
+
+.about {
+    background: #c3d3cb;
+    padding: 98px 0 109px;
+}
+
+.about li {
+    float: left;
+    width: calc(33.33% - 26.67px);
+}
+
+.about ul li:nth-child(2) {
+    margin: 0 40px;
+}
+
+.about h2 {
+    text-align: center;
+    padding: 0 30%;
+}
+
+.about img {
+    display: block;
+    width: 100%;
+}
+
+.about ul {
+    margin-top: 90px;
+}
+
+/* links styles */
+
+.links {
+    background: #152d20;
+    padding: 60px 0;
+}
+
+.links li {
+    float: left;
+    width: 33.33%;
+    height: 178px;
+    display: table;
+}
+
+.links .linksContent {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.links ul {
+    padding: 0 150px;
+    margin: 0;
+}
+
+.links h3 {
+    color: white;
+    font-size: 1.9rem;
+    margin: 0;
+
+}
+
+.links i {
+    width: 100%;
+    /* display: block; */
+    text-align: center;
+    font-size: 3rem;
+    padding: 0 0 25px;
+    /* position: relative;
+    right: 50%; */
+}
+
+/* styles for blog */
+
+.blog {
+    clear: both;
+     width: 100%;
+}
+
+.blog h3 {
+    font-size: 1.75rem;
+    font-family: 'Fredericka the Great', cursive;
+    color: #152d20;
+    text-align: left;
+    margin: 0;
+    margin-right: 50px;
+}
+
+.blog article {
+    float: left;
+    width: 50%;
+}
+
+.blog .figure1 {
+    float: right;
+    width: 50%;
+}
+
+.blog .figure2 {
+    float: left;
+    width: 50%;
+}
+
+.contentLeft {
+    max-width: 640px;
+    margin-left: calc(100% - 640px);
+    padding-right: 95px;
+    margin-top: calc(37.5% - 147px);
+    margin-bottom: calc(37.5% - 147px);
+}
+
+.contentRight {
+    max-width: 620px;
+    margin-right: calc(100% - 640px);
+    padding-left: 95px;
+    margin-top: calc(37.5% - 150px);
+    margin-bottom: calc(37.5% - 150px);
+}
+
+
+.blog a {
+    background: #152d20;
+    color: white;
+    padding: 14px 28px;
+}
+
+.blog a:hover {
+    color: #152d20;
+    background: white;
+    border: 2px solid #152d20;
+    padding: 12px 26px;
+}
+
+.blog p {
+    margin: 5px 0 60px;
+}
+
+/* footer styles */
+
+footer {
+    background: #152d20;
+}
+
+footer .wrapper {
+    padding: 98px 0 109px;
+}
+
+footer li {
+    padding: 3px 0;
+}
+
+footer a {
+    color: white;
+    line-height: 1.45;
+}
+
+footer p {
+    color: white;
+    margin: 0;
+    line-height: 1.45;
+}
+
+footer h3 {
+    color: white;
+    font-size: 1.25rem;
+    margin: 0 0 13px;
+
+}
+
+footer nav {
+    float: left;
+    width: 25%;
+}
+
+footer .newsletter {
+    float: left;
+    width: 50%;
+}
+
+footer .newsletter p {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+footer input[type='email'] {
+    width: 75%;
+    padding: 16.25px 33px;
+    font-family: 'Roboto', sans-serif; 
+    border: none;
+    float: left;
+}
+
+footer input[type='submit'] {
+    width: 25%;
+    border: none;
+    font-family: 'Cormorant Garamond', serif;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 17px 15px;
+    color: white;
+    background: black;
+    float: left;
+    font-size: .9rem;
+}
+
+footer .contact {
+    float: left;
+    width: 25%;
+    text-align: right;
+}
+
+.contact h3 {
+    text-align: right;
+}
+
+footer .copyright {
+    text-align: center;
+    background: #000000;
+    padding: 12px 0;
+}
+
+footer .copyright p {
+    font-size: .9rem;
+    margin: 0;
+}
+
+/* media queries */
+
+@media (max-width: 1280px) {
+    .wrapper {
+        width: 80%;
+    }
+
+    .home figure {
+        width: 30%;
+    }
+
+    .home article {
+        width: 70%;
+    }
+
+    .about h2 {
+        padding: 0 20%;
+    }
+
+    .links ul {
+        padding: 0 75px;
+    }
+
+    .blog .contentLeft {
+        width: 80%;
+        padding-right: 20px;
+        margin-left: 20%;
+        margin-top: calc(37.5% - 147px);
+        margin-bottom: calc(37.5% - 147px);
+    }
+
+    .blog h3 {
+        margin: 0;
+    }
+
+    .blog .contentRight {
+        width: 80%;
+        padding-left: 20px;
+        margin-right: 20%;
+        margin-top: calc(37.5% - 181px);
+        margin-bottom: calc(37.5% - 181px);
+    }
+
+    footer .contact {
+        width: 33.33%;
+    }
+    footer .newsletter {
+        width: 33.33%;
+    }
+    footer input[type='email'] {
+        width: 100%;
+    }
+    footer input[type='submit'] {
+        width: 100%;
+    }
+    footer nav {
+        width: 33.33%;
+    }
+}
+
+@media (max-width: 1221px) {
+    .blog .contentLeft {
+        margin-top: calc(37.5% - 159px);
+        margin-bottom: calc(37.5% - 159px);
+    }
+}
+
+@media (max-width: 1050px) {
+    .links h3 {
+        font-size: 1.5rem;
+    }
+    .blog h3 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 0.9rem;
+    }
+    .blog .contentLeft {
+        margin-top: calc(37.5% - 145px);
+        margin-bottom: calc(37.5% - 145px);
+    }
+}
+
+/* change all the photos to camel case */
+/* try margin auto o on links */
+/* make sure all alt texts are done */
+/* Add tab to main content button */
+/* check for repeating code (add content class to remove overlap from contentRight and contentLeft) */
+/* figure out those stupid fucking social media buttons */
+/* overlap between buttons can be taken out */
+/* add comments */
+/* remove these comments */
+/* figure out the photo optimization */
+
