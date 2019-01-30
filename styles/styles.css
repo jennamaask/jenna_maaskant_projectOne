@@ -8,6 +8,7 @@ article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary
 
 .visuallyhidden:not(:focus):not(:active) { position: absolute; width: 1px; height: 1px; margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(00 0 0);overflow: hidden;}
 
+/* general styles */
 html {
     font-size: 125%;
 }
@@ -74,6 +75,20 @@ a.button:hover {
 img {
     display: block;
     width: 100%;
+}
+
+/* the skip-link styles were taken from the HackerYou notes and adapted for this project */
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  top: 5px;
+  z-index: 999;
+  background: white;
+  color: black;
+}
+
+.skip-link:focus {
+  left: 0;
 }
 
 /* Header Styles */
@@ -794,7 +809,12 @@ footer .copyright p {
         margin: 0 auto;
     }
 }
-
-/* Add tab to main content button */
-/* figure out the photo optimization */
+/* this media querie for retina displays was taken from the bootcamp notes and adjusted to work with this project */
+@media  (-webkit-min-device-pixel-ratio: 2), 
+    (min-resolution: 192dpi) {
+      .header {
+        background:url(assets/backgroundImageRetina.jpg);
+        background-size: 50%;
+    }
+}
 
