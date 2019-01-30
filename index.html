@@ -10,14 +10,19 @@
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
+
+    <!-- start of header -->
     <header>
-        <div class="wrapper">
+        <div class="wrapper clearfix">
             <nav>
+                <div class="hamburger">
+                    <img src="assets/hamburgerMenu.svg" alt="Menu icon.">
+                </div> <!-- end of hamburger -->
                 <ul class="clearfix">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="">Blog</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#footer">Contact</a></li>
                 </ul>
             </nav>
             <div class="title">
@@ -29,13 +34,15 @@
                 <a href="#"><i class="fab fa-snapchat-ghost"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
             </div>
-        </div><!-- end of wrapper -->
+        </div> <!-- end of wrapper -->
     </header>
+
+    <!-- start of main -->
     <main>
         <section id="home" class='home'>
             <div class="wrapper clearfix">
                 <figure>
-                    <img src="assets/image-6.jpg" alt="A tabby cat with bright green eyes laying on a red cushion.">
+                    <img src="assets/imageOne.jpg" alt="A tabby cat with bright green eyes laying on a red cushion.">
                 </figure>
                 <article>
                     <h2>Suzie's Story</h2>
@@ -52,13 +59,13 @@
                 <h2>Some of our friends</h2>
                 <ul class="clearfix">
                     <li>
-                        <img src="assets/image-2.jpg" alt="Green Lizard with yellow eyes gripping on to a branch.">
+                        <img src="assets/imageTwo.jpg" alt="Green Lizard with yellow eyes gripping on to a branch.">
                     </li>
                     <li>
-                        <img src="assets/image-4.jpg" alt="A white sheep COME BACK TO THIS">
+                        <img src="assets/imageThree.jpg" alt="A white sheep in the foreground with many other white sheep in the background on a green pasture.">
                     </li>
                     <li>
-                        <img src="assets/image-3.jpg" alt="A bright yellow and blue parrot perched on a branch and feeding itself a nut with it's left foot.">
+                        <img src="assets/imageFour.jpg" alt="A bright yellow and blue parrot perched on a branch and feeding itself a nut with it's left foot.">
                     </li>
                 </ul>
             </div> <!-- end of wrapper -->
@@ -70,65 +77,62 @@
                         <a href='#'class="linksContent">
                             <i class="fas fa-paw"></i>
                             <h3>Animal spotlight</h3>
-                        </a>
+                        </a> <!-- end of linksContent -->
                     </li>
                     <li>
                         <a href='#' class="linksContent">
                             <i class="fas fa-calendar-check"></i>
                             <h3>Events</h3>
-                        </a>
+                        </a> <!-- end of linksContent -->
                     </li>
                     <li>
                         <a href='#' class="linksContent">
                             <i class="fas fa-shopping-bag"></i>
                             <h3>Merch</h3>
-                        </a>
+                        </a> <!-- end of linksContent -->
                     </li>
                 </ul>
-            </div>
+            </div> <!-- end of wrapper -->
         </section> <!-- end of links -->
         <section class="blog clearfix" id="blog">
-            <!-- <div class="wrapper clearfix"> -->
-               <!-- <div class="row clearfix"> -->
                     <figure class="figure1">
-                        <img src="assets/image-5.jpg" alt="Two zebras touching necks surronded by greenery, one is facing towards us and the other facing away.">
-                    </figure>
+                        <img src="assets/imageFive.jpg" alt="Two zebras touching necks surronded by greenery, one is facing towards us and the other facing away.">
+                    </figure> <!-- end of figure1 -->
                     <article class='article1'>
                         <div class="contentLeft">
                             <h3>Fascinating facts about zebras</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem voluptate, harum autem obcaecati veritatis odio dolor eligendi architecto! Alias, aperiam repellendus consequuntur quasi laboriosam corporis doloremque ut iusto ipsa deleniti!</p>
                             <a href="" class="button">Read more</a>
-                            </div>
-                    </article>
-                <!-- </div> -->
+                            </div> <!-- end of contentLeft -->
+                    </article> <!-- end of article1 -->
                     <figure class="figure2">
-                        <img src="assets/image-2-copy.jpg" alt="A kitten touching her paw to a human hand.">
-                    </figure>
+                        <img src="assets/imageSix.jpg" alt="A kitten touching her paw to a human hand.">
+                    </figure> <!-- end of figure2 -->
                     <article class="article2">
                         <div class="contentRight">
                             <h3>The bond between animals and humans</h3>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem voluptate, harum autem obcaecati veritatis odio dolor eligendi architecto! Alias, aperiam repellendus consequuntur quasi laboriosam corporis doloremque ut iusto ipsa deleniti!</p>
-                            <a href="" class="button">Read more</a>
-                        </div>
-                    </article>
-                
-            <!-- </div> -->
+                            <a href="#" class="button">Read more</a>
+                        </div> <!-- end of contentRight -->
+                    </article> <!-- end of article2 -->
         </section> <!-- end of blog -->
     </main>
-    <footer>
+
+    <!-- start of footer -->
+    <footer id='footer'>
         <div class="wrapper clearfix">
             <nav>
                 <ul class="clearfix">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">Blog</a></li>
-                    <li><a href="">Gallery</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#about">Gallery</a></li>
+                    <li><a href="#footer">Contact</a></li>
                 </ul>
             </nav>
             <div class="newsletter">
                 <h3>Stay updated</h3>
                 <p>Subscribe to our newsletter to stay updated</p>
-                <form action="" class="clearfix">
+                <form action="#" class="clearfix">
                     <label for="email" class="visuallyhidden">Email</label>
                     <input type="email" name="email" placeholder='email address'>
                     <input type="submit" value="Subscribe">
@@ -139,11 +143,11 @@
                 <p>info@email.com | 123-456-7890</p>
                 <p>123 some road, Toronto, ON</p>
                 <p>A5A 5A5, Canada</p>
-            </div>
+            </div> <!-- end of contact -->
         </div> <!-- end of wrapper -->
         <div class="copyright">
             <p>Copyright ©️ 2019 HackerYou</p>
-        </div>
+        </div> <!-- end of coppyright -->
     </footer>
 </body>
 </html>

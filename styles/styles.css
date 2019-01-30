@@ -64,6 +64,11 @@ p {
 
 a.button {
     font-size: .9rem;
+    padding: 14px 28px;
+}
+
+a.button:hover {
+    padding: 12px 26px;
 }
 
 img {
@@ -74,9 +79,10 @@ img {
 /* Header Styles */
 
 header {
-    background-image: url(../assets/image-1.jpg);
+    background-image: url(../assets/backgroundImage.jpg);
     background-size: cover;
-    height: 800px;
+    height: 100vh;
+    background-position: center center;
 }
 
 header .wrapper {
@@ -108,6 +114,13 @@ header nav a:hover:after {
     width: 100%;
 }
 
+header .hamburger {
+    display: none;
+}
+
+header .hamburger img {
+    width: 60px;
+}
 
 header ul li {
     float: left;
@@ -121,14 +134,14 @@ header ul {
 .socialMedia {
     position: absolute;
     bottom: 50px;
-    right: -20px;
+    right: -5%;
 }
 
 .socialMedia a:nth-child(2) i {
     margin-right: 5px;
 }
 
-i {
+.socialMedia i {
     color: white;
     font-size: 1.1rem;
     float: right;
@@ -173,15 +186,12 @@ i {
 .home a {
     color: #152d20;
     background: white;
-    padding: 14px 28px;
 }
 
 .home a:hover {
     color: white;
     background: #152d20;
     border: 2px solid white;
-    padding: 12px 26px;
-
 }
 
 /* about styles */
@@ -193,7 +203,7 @@ i {
 
 .about li {
     float: left;
-    width: calc(33.33% - 26.67px);
+    width: calc((1/3)*100% - (80px/3));
 }
 
 .about ul li:nth-child(2) {
@@ -223,7 +233,7 @@ i {
 
 .links li {
     float: left;
-    width: 33.33%;
+    width: calc((1/3)*100%);
     height: 178px;
     display: table;
 }
@@ -247,12 +257,10 @@ i {
 
 .links i {
     width: 100%;
-    /* display: block; */
+    color: white;
     text-align: center;
     font-size: 3rem;
     padding: 0 0 25px;
-    /* position: relative;
-    right: 50%; */
 }
 
 /* styles for blog */
@@ -289,31 +297,35 @@ i {
 .contentLeft {
     max-width: 640px;
     margin-left: calc(100% - 640px);
+    /* To get this margin I took the used 100% of the width of the article div minus the fixed width of the content to line we up exatly with the wrapper on the other sections*/
     padding-right: 95px;
     margin-top: calc(37.5% - 147px);
     margin-bottom: calc(37.5% - 147px);
+    /* To come up with the numbers for margin-top and bottom:
+    -I knew my article div would be the same size as the figure next to it.
+    -The ratio of the figure was height = 75% of the width
+    -since the margin percentage values are the percentage of the width, I used 75% of the width as the value for the height of the div
+    -Then I used half of 75% (37.5%) to calculate each the top and bottom margin, subrtacting half of the height of the content
+    -To make this responsive I had to recalculate these margins each time the height of the content increased because of a new line break. You will see all these calculations in the media queries. */
 }
 
 .contentRight {
-    max-width: 620px;
+    max-width: 640px;
     margin-right: calc(100% - 640px);
     padding-left: 95px;
-    margin-top: calc(37.5% - 150px);
-    margin-bottom: calc(37.5% - 150px);
+    margin-top: calc(37.5% - 151px);
+    margin-bottom: calc(37.5% - 151px);
 }
-
 
 .blog a {
     background: #152d20;
     color: white;
-    padding: 14px 28px;
 }
 
 .blog a:hover {
     color: #152d20;
     background: white;
     border: 2px solid #152d20;
-    padding: 12px 26px;
 }
 
 .blog p {
@@ -366,24 +378,25 @@ footer .newsletter p {
     padding-bottom: 10px;
 }
 
+footer input {
+    border: none;
+    float: left
+}
+
 footer input[type='email'] {
     width: 75%;
     padding: 16.25px 33px;
     font-family: 'Roboto', sans-serif; 
-    border: none;
-    float: left;
 }
 
 footer input[type='submit'] {
     width: 25%;
-    border: none;
     font-family: 'Cormorant Garamond', serif;
     text-transform: uppercase;
     text-align: center;
     padding: 17px 15px;
     color: white;
     background: black;
-    float: left;
     font-size: .9rem;
 }
 
@@ -410,13 +423,19 @@ footer .copyright p {
 
 /* media queries */
 
-@media(max-width: 1340px) {
-
+@media(max-width: 1425px) {
+    header .socialMedia {
+        right: 5px;
+    }
 }
 
 @media (max-width: 1280px) {
     .wrapper {
         width: 80%;
+    }
+
+    header .socialMedia {
+        right: -8%;
     }
 
     .home figure {
@@ -454,20 +473,24 @@ footer .copyright p {
     }
 
     footer .contact {
-        width: 33.33%;
+        width: calc((1/3)*100%);
     }
+
     footer .newsletter {
-        width: 33.33%;
+        width: calc((1/3)*100%);
     }
+
     footer input[type='email'] {
         width: 100%;
     }
+
     footer input[type='submit'] {
         width: 100%;
         margin-top: 10px;
     }
+
     footer nav {
-        width: 33.33%;
+        width: calc((1/3)*100%);
     }
 }
 
@@ -537,8 +560,6 @@ footer .copyright p {
         width: 30%;
     }
 
-    
-
     footer .wrapper {
         padding: 40px 0;
     }
@@ -550,6 +571,10 @@ footer .copyright p {
 }
 
 @media (max-width: 912px) {
+    h1 {
+        font-size: 5rem;
+    }
+
     h2 {
         font-size: 1.9rem;
     }
@@ -579,48 +604,6 @@ footer .copyright p {
 }
 
 @media(max-width: 845px) {
-    /* .blog .contentLeft {
-        margin-top: calc(37.5% - 140px);
-        margin-bottom: calc(37.5% - 140px);
-    }
-    .blog .contentRight {
-        margin-top: calc(37.5% - 144px);
-        margin-bottom: calc(37.5% - 144px);
-    } */
-    .links ul {
-        padding: 0;
-    }
-    .blog .figure1, .blog .figure2, .blog article {
-        float: none;
-        width: 100%;
-    }
-
-    .blog figure {
-        height: 400px;
-        overflow: hidden;
-        position: relative;
-    }
-
-    .blog img {
-        position: absolute;
-        top: -30%;
-    }
-
-    .blog .contentLeft, .blog .contentRight {
-        width: 80%;
-        margin: 0 auto;
-        padding:50px 0;
-        text-align: center;
-    }
-
-    .blog p {
-        margin: 20px 0 60px;
-    }
-    
-    .blog h3 {
-        text-align: center;
-    }
-
     .home {
         padding: 50px 0 70px;
     }
@@ -649,19 +632,67 @@ footer .copyright p {
         margin: 0 10px 0 0 ;
     }
 
-}
+    .links ul {
+        padding: 0;
+    }
+    .blog .figure1, .blog .figure2, .blog article {
+        float: none;
+        width: 100%;
+    }
 
-@media(max-width: 695px) {
     .blog figure {
-        height: 300px;
+        height: 400px;
+        overflow: hidden;
+        position: relative;
     }
 
     .blog img {
-        top: -40%;
+        position: absolute;
+        top: -30%;
     }
 
-    .about h2 {
-        padding: 0 10%;
+    .blog .contentLeft, .blog .contentRight {
+        width: 80%;
+        margin: 0 auto;
+        padding: 50px 0;
+        text-align: center;
+    }
+
+    .blog p {
+        margin: 20px 0 60px;
+    }
+    
+    .blog h3 {
+        text-align: center;
+    }
+
+}
+
+@media(max-width: 695px) {
+    h1 {
+        font-size: 3rem;
+        padding: 10px 0 0;
+        margin: 0;
+        text-align: left;
+        float: left;
+        width: 50%;
+    }
+
+    nav {
+        float: right;
+    }
+
+    header .hamburger {
+        display: block;
+        padding: 20px 0 0 0;
+    }
+    
+    header ul {
+        display: none;
+    }
+
+    header {
+        background-position: 30% center;
     }
 
     .home figure {
@@ -679,11 +710,36 @@ footer .copyright p {
     .home p, .home h2 {
         text-align: left;
     }
+
+    .blog figure {
+        height: 300px;
+    }
+
+    .blog img {
+        top: -40%;
+    }
+
+    .about h2 {
+        padding: 0 10%;
+    }
 }
 
 @media(max-width: 613px) {
     .wrapper {
         width: 90%;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+        padding-right: 60%;
+    }
+
+    header .hamburger img {
+        width: 40px;
+    }
+
+    header .socialMedia {
+        display: none;
     }
 
     .links li {
@@ -714,7 +770,7 @@ footer .copyright p {
     }
 
     .blog img {
-        top: -40%;
+        top: -30%;
     }
 
     footer p {
@@ -739,14 +795,6 @@ footer .copyright p {
     }
 }
 
-/* change all the photos to camel case */
-/* try margin auto o on links */
-/* make sure all alt texts are done */
 /* Add tab to main content button */
-/* check for repeating code (add content class to remove overlap from contentRight and contentLeft) */
-/* figure out those stupid fucking social media buttons */
-/* overlap between buttons can be taken out */
-/* add comments */
-/* remove these comments */
 /* figure out the photo optimization */
 
